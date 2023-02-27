@@ -1,0 +1,14 @@
+dataset_dtype stationary 
+dataset_condition noisy_reverb 
+ref_mic_idx 0
+net_type MISO
+loss MISO_RI_MAG
+dataset_file /fs/scratch/PAS0774/Shanmukh/Databases/ZQ_LOC_Dataset/features_32_8_ms_20cm/trainset
+val_dataset_file /fs/scratch/PAS0774/Shanmukh/Databases/ZQ_LOC_Dataset/features_32_8_ms_20cm/devset
+ckpt_dir /fs/scratch/PAS0774/Shanmukh/Experiments/ZQ_Dataset_Results/DC_CRN/
+exp_name With_Input_Norm 
+array_type linear
+num_mics 2
+intermic_dist 20
+room_size 8 8 3
+inp_mean_var_norm_flag True

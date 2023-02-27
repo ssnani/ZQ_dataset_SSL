@@ -1,0 +1,12 @@
+#!/bin/sh
+#SBATCH --job-name=ZQLSTM
+#SBATCH --nodes=1 --ntasks-per-node=1 --gpus=1
+#SBATCH --constraint=48core
+#SBATCH --time=04:00:00
+#SBATCH --account=PAS0774
+#SBATCH --array=1-2
+#SBATCH --output=Test_tol_7_5_degree_no_vad_Aachen_%A_%a.out
+echo "job started ...."
+cd /users/PAS1937/battula12/Shanmukh/Projects/MVTSS/ZQ_dataset_SSL/Code
+./run_test.sh 1 1 ../Logs/test_inputs/input-$SLURM_ARRAY_TASK_ID.txt
+echo "job finished!"

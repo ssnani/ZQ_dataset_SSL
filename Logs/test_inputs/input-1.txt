@@ -1,0 +1,10 @@
+dataset_dtype stationary
+array_type linear
+num_mics 8
+intermic_dist 8
+room_size 8 8 3
+real_rirs True
+dist 1
+loss PSM_MSE
+inp_mean_var_norm_flag True
+model_path epoch=21-step=4290.ckpt

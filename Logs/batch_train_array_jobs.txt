@@ -1,0 +1,12 @@
+#!/bin/sh
+#SBATCH --job-name=ZQLSTM
+#SBATCH --nodes=1 --ntasks-per-node=4 --gpus=4
+#SBATCH --constraint=48core
+#SBATCH --time=48:00:00
+#SBATCH --account=PAS0774
+#SBATCH --array=1-7
+#SBATCH --output=Train_DC_CRN_%A_%a.out
+echo "job started ...."
+cd /users/PAS1937/battula12/Shanmukh/Projects/MVTSS/ZQ_dataset_SSL/Code
+./run_array_jobs.sh 1 4 ../Logs/train_inputs/DC_CRN/input-$SLURM_ARRAY_TASK_ID.txt
+echo "job finished!"
